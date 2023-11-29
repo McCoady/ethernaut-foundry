@@ -1,66 +1,27 @@
-## Foundry
+# Ethernaut Reforged 👩‍🚀🔨
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+This repo aims to remove the need for interaction with the Ethernaut website to complete the challenges from the Ethernaut CTF.
 
-Foundry consists of:
+## Setup
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+- Have Foundry downloaded
+- Clone this repo
+- Copy the items in `.env.example` with your own credentials
+- Open `/script/setup/EthernautHelper.sol` and edit the `HERO` variable to your own address
+- Get some testnet eth (Sepolia is recommended as ether is easier to comeby)
 
-## Documentation
+## Completing A Challenge
 
-https://book.getfoundry.sh/
+While the challenge contracts are part of the repo (`challenge-contracts`), it's recommended that you use interfaces when interacting with the challenge contracts to avoid issues with requiring old solidity versions and older versions of OpenZeppelin contracts for some of the challenges.
 
-## Usage
-
-### Build
-
-```shell
-$ forge build
+When you think you've created the script that solves the challenge call the following:
+```
+source .env
+forge script script/solutions/SCRIPT_FILE_NAME.s.sol:SCRIPT_CONTRACT_NAME --rpc-url $SEPOLIA_RPC
 ```
 
-### Test
+This will run a local simulation of your transaction off chain, if your script passes the challenge, run the same `forge script` command again but add `--broadcast` to broadcast the transaction(s) on chain.
 
-```shell
-$ forge test
-```
+## Further Updates
 
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+This repo is still a work in progress, and eventually all 29 of the Ethernaut challenges will be added. The description and hints from the ethernaut site for each challenge will be bought over as well as adding some extra resources based on the specific vulnerability the challenge highlights including educational content and real world examples.
