@@ -1,6 +1,6 @@
 # Ethernaut Reforged 👩‍🚀🔨
 
-This repo aims to remove the need for interaction with the Ethernaut website to complete the challenges from the Ethernaut CTF.
+This repo aims to remove the need for interaction with the Ethernaut website to complete the challenges from the [Ethernaut CTF](https://ethernaut.openzeppelin.com/).
 
 ## Setup
 
