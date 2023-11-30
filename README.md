@@ -1,6 +1,6 @@
 # Ethernaut Reforged 👩‍🚀🔨
 
-This repo is a customized Foundry environment where devs can create/solve/submit ethernaut challenges without the need for interaction with the [Ethernaut CTF webiste](https://ethernaut.openzeppelin.com/). 
+This repo is a customized Foundry environment where devs can create/solve/submit ethernaut challenges without the need for interaction with the [Ethernaut CTF website](https://ethernaut.openzeppelin.com/). 
 
 ## Setup
 
@@ -8,7 +8,7 @@ This repo is a customized Foundry environment where devs can create/solve/submit
 - Clone this repo
 - Copy the items in `.env.example` with your own credentials
 - Open `/script/setup/EthernautHelper.sol` and edit the `HERO` variable to your own address
-- Get some testnet eth (Sepolia is recommended as ether is easier to comeby)
+- Get some testnet eth (Sepolia is recommended as ether is easier to come by)
 
 ## Completing A Challenge
 
@@ -24,4 +24,4 @@ This will run a local simulation of your transaction off chain, if your script p
 
 ## Further Updates
 
-This repo is still a work in progress, and eventually all 29 of the Ethernaut challenges will be added. The description and hints from the ethernaut site for each challenge will be bought over as well as adding some extra resources based on the specific vulnerability the challenge highlights including educational content and real world examples.
+This repo is still a work in progress, and eventually all 29 of the Ethernaut challenges will be added. The description and hints from the ethernaut site for each challenge will be brought over as well as adding some extra resources based on the specific vulnerability the challenge highlights including educational content and real world examples.
