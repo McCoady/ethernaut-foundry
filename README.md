@@ -8,7 +8,7 @@ This repo is a customized Foundry environment where devs can create/solve/submit
 - Clone this repo
 - Copy the items in `.env.example` with your own credentials
 - Open `/script/setup/EthernautHelper.sol` and edit the `HERO` variable to your own address
-- Get some testnet eth (Sepolia is recommended as ether is easier to comeby)
+- Get some testnet eth (Sepolia is recommended as ether is easier to come by)
 
 ## Completing A Challenge
 
