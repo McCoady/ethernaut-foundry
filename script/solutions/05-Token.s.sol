@@ -25,6 +25,6 @@ contract TokenSolution is Script, EthernautHelper {
         require(levelSuccess, "Challenge not passed yet");
         vm.stopBroadcast();
 
-        console2.log("LEVEL SUCCESSFUL, GOOD START!");
+        console2.log("LEVEL SUCCESSFUL, YOU'RE PRETTY GOOD AT THIS!");
     }
 }

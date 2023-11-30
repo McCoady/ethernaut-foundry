@@ -25,6 +25,6 @@ contract ForceSolution is Script, EthernautHelper {
         require(levelSuccess, "Challenge not passed yet");
         vm.stopBroadcast();
 
-        console2.log("LEVEL SUCCESSFUL, GOOD START!");
+        console2.log("LEVEL SUCCESSFUL, KEEP IT UP!");
     }
 }

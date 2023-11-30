@@ -7,8 +7,8 @@ import {EthernautHelper} from "../setup/EthernautHelper.sol";
 
 // NOTE You can import your helper contracts & create interfaces here
 
-contract FalloutSolution is Script, EthernautHelper {
-    address constant LEVEL_ADDRESS = 0x676e57FdBbd8e5fE1A7A3f4Bb1296dAC880aa639;
+contract PrivacySolution is Script, EthernautHelper {
+    address constant LEVEL_ADDRESS = 0x131c3249e115491E83De375171767Af07906eA36;
     uint256 heroPrivateKey = vm.envUint("PRIVATE_KEY");
 
     function run() public {
@@ -25,6 +25,6 @@ contract FalloutSolution is Script, EthernautHelper {
         require(levelSuccess, "Challenge not passed yet");
         vm.stopBroadcast();
 
-        console2.log("LEVEL SUCCESSFUL, ANOTHER ONE!");
+        console2.log("LEVEL SUCCESSFUL, KEEP GOING!");
     }
 }
