@@ -6,12 +6,14 @@ import {IEthernaut} from "./IEthernaut.sol";
 import "forge-std/Test.sol";
 
 contract EthernautHelper is Script {
-    address constant HERO = address(0); // NOTE CHANGE THIS TO YOUR ADDRESS
+    address constant HERO = 0xa350FaFF36B225B972271a259C4C394301608a6E; // NOTE CHANGE THIS TO YOUR ADDRESS
+    
     address constant ETHERNAUT = 0xa3e7317E591D5A0F1c605be1b3aC4D2ae56104d6;
 
     function createInstance(
         address levelAddress
     ) public returns (address challengeInstance) {
+        require(HERO != address(0), "Set HERO address in EthernautHelper.sol");
         vm.recordLogs();
         IEthernaut(ETHERNAUT).createLevelInstance(levelAddress);
         Vm.Log[] memory createEntries = vm.getRecordedLogs();
@@ -30,5 +32,37 @@ contract EthernautHelper is Script {
         } else {
             return true;
         }
+    }
+
+    function successMessage(uint256 levelNo) public returns(string memory) {
+        string memory message;
+
+        string[] memory randMessages = new string[](7);
+        randMessages[0] = "LEVEL SUCCESSFUL, GOOD JOB!";
+        randMessages[1] = "LEVEL SUCCESSFUL, ANOTEHR ONE DONE!";
+        randMessages[2] = "LEVEL SUCCESSFUL, KEEP IT UP!";
+        randMessages[3] = "LEVEL SUCCESSFUL, GO GET 'EM TIGER!";
+        randMessages[4] = "LEVEL SUCCESSFUL, YOU'RE A BEAST!";
+        randMessages[5] = "LEVEL SUCCESSFUL, LET'S GOOO!";
+        randMessages[6] = "LEVEL SUCCESSFUL, ANOTHER ONE BITES THE DUST!";
+        
+        if (levelNo == 1) {
+            message = "LEVEL SUCCESSFUL, GOOD START!";
+        } else if (levelNo == 10) { 
+            message = "LEVEL SUCCESSFUL, 10 DOWN!";
+        } else if (levelNo == 15) {
+            message = "LEVEL SUCCESSFUL, PASSED THE HALFWAY MARK!";
+        } else if (levelNo == 20) {
+            message = "LEVEL SUCCESSFUL, 20 DOWN!";
+        } else if (levelNo == 28) {
+            message = "LEVEL SUCCESSFUL, JUST ONE LEFT!";
+        } else if (levelNo == 29) {
+            message = "LEVEL SUCCESSFUL, YOU DID IT!";
+        } else {
+            uint256 randMsgChoice = block.timestamp % randMessages.length;
+            message = randMessages[randMsgChoice];
+        }
+
+        return message;
     }
 }

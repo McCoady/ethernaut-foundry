@@ -2,7 +2,6 @@
 pragma solidity 0.8.21;
 
 import {Script, console2} from "forge-std/Script.sol";
-import "forge-std/Test.sol";
 import {EthernautHelper} from "../setup/EthernautHelper.sol";
 
 // NOTE You can import your helper contracts & create interfaces here
@@ -25,6 +24,6 @@ contract MotorbikeSolution is Script, EthernautHelper {
         require(levelSuccess, "Challenge not passed yet");
         vm.stopBroadcast();
 
-        console2.log("LEVEL SUCCESSFUL, LETS GO, ONLY 4 LEFT!");
+        console2.log(successMessage(25));
     }
 }

@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-// NOTE our goal is to become the owner
+// NOTE our goal is to become the owner & withdraw the funds
 contract Fallback {
     mapping(address => uint) public contributions;
     address public owner;
