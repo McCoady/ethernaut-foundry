@@ -10,5 +10,8 @@ Things that might help:
 - What is an odometer?
 
 ## Extra Hints
->! Solidity versions <0.8.0 did not have built in over/underflow checks.
->! See: [Solidity by Example Arithmetic Over/underflow](https://solidity-by-example.org/hacks/overflow/)
+<details>
+<summary>Hints</summary>
+Solidity versions before 0.8.0 did not have built in over/underflow checks.
+See: [Solidity by Example Arithmetic Over underflow](https://solidity-by-example.org/hacks/overflow/)
+</details>
